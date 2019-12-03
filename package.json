@@ -8,7 +8,7 @@
     "dev": "node ./scripts/dev",
     "build": "node ./scripts/prod"
   },
-  "author": "hzlisuwei",
+  "author": "chengboxu",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.3.1",
