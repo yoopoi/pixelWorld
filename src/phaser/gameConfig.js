@@ -7,14 +7,14 @@
     // height: 15 * 64, // 960
     parent: 'app',
    
-    // physics: {
-    //     default: 'arcade',
-    //     arcade: {
-    //         gravity: {
-    //             y: 300
-    //         },
-    //         debug: false,
-    //     },
-    // },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: {
+                y: 0
+            },
+            debug: true,
+        },
+    },
 };
 export default defaultConfig

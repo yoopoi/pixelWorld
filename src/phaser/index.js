@@ -16,7 +16,6 @@ class MyGame extends Phaser.Game{
     constructor(_config){
         super(_config);
         this.scene.add('origin', origin);
-        this.scene.start('origin')
     }
 }
 window.game = new MyGame(config);
@@ -55,7 +54,9 @@ function preload() {
 
 function create() {
     resize();
-    this.scene.start('origin')
+    setTimeout(() => {
+        this.scene.start('origin') 
+},1000);
 }
 
 function update() {
