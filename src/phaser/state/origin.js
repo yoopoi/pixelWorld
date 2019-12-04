@@ -1,15 +1,15 @@
-import uiWindow from '../uimaster/uiWindow'
+import Wall from '../sprites/wall';   
 import EquipmentBar from '../components/equipmentBar'
-//import Player from '../sprites/Player';
 import Mushroom from '../sprites/Mushroom';
-import uiItem from '../uimaster/uiItem'
+
 var Origin = new Phaser.Class({
     Extends: Phaser.Scene,
 
     init: function (data) {
     },
     preload:function(){
-      this.load.image('mushroom', require('../img/mushroom.png'));
+    this.load.spritesheet('textureSheet', '../img/colored_transparent.png',{ frameWidth: 17, frameHeight: 16 });
+    this.load.image('mushroom', require('../img/mushroom.png'));
     },
     create:function(){
         console.log(this.scene.backgroundColor = 0xffffff);
@@ -17,7 +17,9 @@ var Origin = new Phaser.Class({
         //new uiItem({scene:this,pos:{x:50,y:50},style:{img:'star'}});
         let toolBar = new EquipmentBar(this);
         this.mushroom = new Mushroom({scene:this,x:300,y:500,key:'mushroom'});
-        console.log(this.physics.add.sprite);
+        for (let i = 0;i < 100;i++){
+            let _wall = new Wall({scene:this,x:Math.random() * 1920,y:Math.random() * 1080,width:Math.random() * 200 + 10,height:Math.random() * 500 + 20});
+        }
     },
     update:function(){
         this.mushroom.update();

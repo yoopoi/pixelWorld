@@ -1,13 +1,7 @@
-import Phaser from 'phaser'
-import Player from './Player'
-export default class extends Phaser.TileSprite {
-  constructor ({ game, x, y, width,height }) {
-    super(game, x, y, width,height,"tileSheet",340)
-    game.physics.enable(this,Phaser.Physics.ARCADE)
-    this.body.collideWorldBounds = true;
-    
-    this.body.immovable=true;
-    
+export default class Wall {
+  constructor ({ scene, x, y, width,height }) {
+    this.entity = scene.add.tileSprite(x,y,width,height,'textureSheet',45)
+    return this;
   }
 
   update () {
