@@ -2,7 +2,7 @@
     type: Phaser.AUTO,
     width: 1920,
     height: 1080,
-    backgroundColor: '#aaa',
+    backgroundColor: '#333',
     // width: 9 * 64, // 576
     // height: 15 * 64, // 960
     parent: 'app',

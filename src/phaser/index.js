@@ -49,8 +49,6 @@ let gameOver;
 let bgMusic;
 
 function preload() {
-    this.load.image('mushroom', require('./img/mushroom.png'));
-    this.load.spritesheet('textureSheet', '../img/colored_transparent.png',{ frameWidth: 17, frameHeight: 16 });
 }
 
 function create() {
