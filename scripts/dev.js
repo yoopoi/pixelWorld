@@ -29,8 +29,8 @@ portfinder.basePort = 3000
 portfinder.getPortPromise().then((port) => {
     const uri = `http://${ip.address()}:${port}`
     execa.shell(`json-server --watch mock/mock.json --port ${port}`)
-    opn(`${uri}/db`)
-    console.log(`Mock Server: ${uri}`)
+    //opn(`${uri}/db`)
+    //console.log(`Mock Server: ${uri}`)
     return port
 }).then((port) => {
     console.log(runPath);

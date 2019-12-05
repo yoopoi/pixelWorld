@@ -12,7 +12,7 @@ var Origin = new Phaser.Class({
     this.load.spritesheet('textureSheet', require('../img/colored_transparent.png'),{ frameWidth: 16, frameHeight: 16,spacing:1 });
     this.load.image('mushroom', require('../img/mushroom.png'));
     console.log(this.load)
-    this.load.tilemapCSV('originMap', require('../map/origin.csv'));
+    this.load.tilemapTiledJSON('originMap', require('../sceneMap/game02.json'));
     },
     create:function(){
         //this.add.tilemap('textureSheet',0,0,1920,1080);
